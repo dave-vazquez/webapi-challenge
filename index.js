@@ -22,6 +22,10 @@ server.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
+server.get('/', () => {
+  res.send('Hello');
+});
+
 function errorHandler(err, req, res, next) {
   if (res.headerSent) {
     return next(err);
