@@ -6,7 +6,7 @@ module.exports = {
   insert,
   update,
   remove,
-  getProjectActions,
+  getProjectActions
 };
 
 function get(id) {
@@ -22,7 +22,6 @@ function get(id) {
 
       if (project) {
         project.actions = actions;
-
         return mappers.projectToBody(project);
       } else {
         return null;
